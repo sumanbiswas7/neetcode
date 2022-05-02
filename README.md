@@ -1,3 +1,3 @@
 # neetcode
-Ds-Algo Problems and Solution neetcode 150
+DS-Algo Problems and Solution neetcode 150
 Link : https://neetcode.io/
