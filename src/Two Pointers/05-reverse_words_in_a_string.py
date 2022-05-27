@@ -1,4 +1,7 @@
-s = "  hello world  "
+# MEDIUM
+# Given an input string s, reverse the order of the words.
+# Input: s = "the sky is blue"
+# Output: "blue is sky the"
 
 def reverseWords(s):
     # rem = " ".join(s.split())
