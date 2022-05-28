@@ -1,31 +1,20 @@
-s = "  hello world  "
+# Input [3,3,3] 3
+# Output [0,2]
 
-def reverseWords(s):
-    # rem = " ".join(s.split())
-    tempArr = []
-    tempStr = ""
+def searchRange(nums, target):
+    res = []
+        
+    for i in range(len(nums)):
+        if target == nums[i]:
+            res.append(i)
+    
+    if len(res) == 1:
+        res.append(res[0])
 
-    l , i = 0 , len(s)-1
-    while l <= i:
+    if len(res) != 0:
+        return [res[0],res[-1]]
+    else:
+        return [-1,-1]
 
-        if s[i] == " ":
-            if tempStr != "":
-                tempArr.append(tempStr)
-            tempStr = ""
-        elif i == 0:
-            if s[i] == " ":
-                if tempStr != "":
-                    tempArr.append(tempStr)
-            else:
-                tempStr = s[i] + tempStr
-                tempArr.append(tempStr)
-        else:
-            tempStr = s[i] + tempStr
+print(searchRange([3,3,3], 3))
 
-        i -= 1
-
-    res = " ".join(tempArr)
-    return res
-   
-
-reverseWords("the sky is blue")
