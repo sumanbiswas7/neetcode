@@ -6,7 +6,24 @@
 # Input: strs = ["eat","tea","tan","ate","nat","bat"]
 # Output: [["bat"],["nat","tan"],["ate","eat","tea"]]
 
+from collections import defaultdict
+
 def groupAnagrams(strs):
+    ans = defaultdict(list)
+        
+    for i in strs:
+        count = [0] * 26    
+        
+        for s in i:
+            count[ord(s)-ord("a")] += 1
+            
+        ans[tuple(count)].append(i)
+        
+    return ans.values()
+                
+                
+
+def groupAnagrams2(strs):
     hashSet = {}
     n = 0
     for i in strs:
@@ -26,5 +43,4 @@ def groupAnagrams(strs):
 
 
 strs = ["eat","tea","tan","ate","nat","bat"]
-groupAnagrams([""])
-
+groupAnagrams(strs)
