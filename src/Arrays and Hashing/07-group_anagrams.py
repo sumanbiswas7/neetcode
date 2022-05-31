@@ -21,7 +21,6 @@ def groupAnagrams(strs):
         
     return ans.values()
                 
-                
 
 def groupAnagrams2(strs):
     hashSet = {}
@@ -44,3 +43,4 @@ def groupAnagrams2(strs):
 
 strs = ["eat","tea","tan","ate","nat","bat"]
 groupAnagrams(strs)
+
